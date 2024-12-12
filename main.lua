@@ -50,10 +50,10 @@ function Tutorialmod:postFireTear(tear) --이 함수 내에서 tear는 '눈물'�
 if player:HasCollectible(TUTORIAL_ITEM_ID) then --튜토리얼 아이템을 플레이어가 소지하고 있다면...
   tear:ChangeVariant(TearVariant.FETUS) --눈물 모양을 씨섹 태아로 변경
  
-local retard = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.FART, 0, player.Position, Vector.Zero, player):ToEffect() 
-retard.Color = Color(0,0,1,0.5,0,0,1) --방귀를 파랗게 칠한다.
+local fard = Isaac.Spawn(EntityType.ENTITY_EFFECT, EffectVariant.FART, 0, player.Position, Vector.Zero, player):ToEffect() 
+fard.Color = Color(0,0,1,0.5,0,0,1) --방귀를 파랗게 칠한다.
 --눈물을 쏠 때마다 플레이어 위치에 방귀 이펙트를 생성
---이 function 외부에서 retard 변수를 써도 소용 없다. local이 앞에 붙었기 때문에, 이 함수 밖에서 이 값을 불러오려고 하면 아무 값도 없는 nil이 나온다.
+--이 function 외부에서 fard 변수를 써도 소용 없다. local이 앞에 붙었기 때문에, 이 함수 밖에서 이 값을 불러오려고 하면 아무 값도 없는 nil이 나온다.
   
 end
   
